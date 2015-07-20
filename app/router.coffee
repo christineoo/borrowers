@@ -6,7 +6,8 @@ Router = Ember.Router.extend
 
 Router.map ->
   @resource 'friends', ->
-  @route 'friends/index'
-  @route 'friends/new'
+    @route 'index'
+    @route 'new'
+    @route 'show', path: ':friend_id'
 
 `export default Router;`
