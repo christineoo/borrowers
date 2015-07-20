@@ -5,5 +5,7 @@ Router = Ember.Router.extend
   location: config.locationType
 
 Router.map ->
+  @resource 'friends', ->
+  @route 'friends/index'
 
 `export default Router;`
