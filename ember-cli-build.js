@@ -17,9 +17,6 @@ module.exports = function(defaults) {
   app.import('vendor/fontello/font/fontello.eot', {
     destDir: 'font'
   });
-  app.import('vendor/fontello/font/fontello.ttf', {
-    destDir: 'font'
-  });
   app.import('vendor/fontello/font/fontello.svg', {
     destDir: 'font'
   });
