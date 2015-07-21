@@ -8,8 +8,9 @@ Router.map ->
   @resource 'friends', ->
     @route 'index'
     @route 'new'
-    @route 'show', path: ':friend_id'
+    @route 'show', path: ':friend_id', ->
+        @resource 'articles', ->
     @route 'edit', path: ':friend_id/edit'
-  @resource 'articles', ->
+  @route 'articles/index'
 
 `export default Router;`
