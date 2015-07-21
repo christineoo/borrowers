@@ -9,5 +9,6 @@ Router.map ->
     @route 'index'
     @route 'new'
     @route 'show', path: ':friend_id'
+    @route 'edit', path: ':friend_id/edit'
 
 `export default Router;`
