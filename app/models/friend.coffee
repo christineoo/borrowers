@@ -1,6 +1,7 @@
 `import DS from 'ember-data'`
 
 Friend = DS.Model.extend {
+  articles: DS.hasMany('article')
   firstName: DS.attr 'string'
   lastName: DS.attr 'string'
   email: DS.attr 'string'
