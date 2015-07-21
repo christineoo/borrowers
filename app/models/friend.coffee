@@ -6,6 +6,9 @@ Friend = DS.Model.extend {
   email: DS.attr 'string'
   twitter: DS.attr 'string'
   totalArticles: DS.attr 'number'
+
+  fullName: Ember.computed 'firstName', 'lastName', ->
+      @get('firstName') + ' ' + @get('lastName')
 }
 
 `export default Friend`

@@ -14,11 +14,7 @@
     {{#each model as |friend|}}
       <tr>
         <td>{{friend.id}}</td>
-        <td>
-          {{#link-to "friends.show" friend}}
-            {{friend.firstName}} {{friend.lastName}}
-          {{/link-to}}
-        </td>
+        <td>{{link-to friend.fullName "friends.show" friend}}</td>
         <td><a href="#" {{action "delete" friend}}>Delete</a></td>
       </tr>
     {{/each}}
