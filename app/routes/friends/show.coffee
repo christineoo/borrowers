@@ -1,11 +1,5 @@
 `import Ember from 'ember'`
 
-FriendsShowRoute = Ember.Route.extend
-
-  actions:
-      delete: (friend)->
-          _this = this
-          friend.destroyRecord().then =>
-              _this.transitionTo 'friends.index'
+FriendsShowRoute = Ember.Route.extend()
 
 `export default FriendsShowRoute`
