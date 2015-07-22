@@ -7,7 +7,7 @@ ArticlesNewRoute = Ember.Route.extend
 
   actions:
       save: ->
-          _this: this
+          _this = this
           model = @modelFor 'articles/new'
           model.save().then =>
               _this.transitionTo 'articles'
