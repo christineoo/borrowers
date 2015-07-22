@@ -10,6 +10,7 @@ Router.map ->
     @route 'new'
     @route 'show', path: ':friend_id', ->
         @resource 'articles', ->
+            @route 'new'
     @route 'edit', path: ':friend_id/edit'
   @route 'articles/index'
 
