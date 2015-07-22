@@ -4,8 +4,15 @@ ArticlesArticleRowComponent = Ember.Component.extend
   tagName: 'tr'
   article: null #passed-in
   articleStates: null #passed-in
-  actions:
-      saveArticle: (article) ->
-          this.sendAction 'save', article
+
+  autoSave: ->
+      article = @get('article')
+      if !article.get('isNew')
+          @sendAction 'save', article
+
+  stateChanged: Ember.on 'init', Ember.observer 'article.state', ->
+      article = @get('article')
+      if article.get('isDirty') && !article.get('isSaving')
+          Ember.run.once this, @autoSave
 
 `export default ArticlesArticleRowComponent`
