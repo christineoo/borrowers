@@ -1,11 +1,11 @@
 `import FriendsBaseController from './base'`
 
-FriendsNewController = Ember.Controller.extend
+FriendsNewController = FriendsBaseController.extend
 
   actions:
       cancel: ->
-          this.transitionToRoute 'friends'
+          @transitionToRoute 'friends.index'
           false
 
-`export default FriendsBaseController`
+`export default FriendsNewController`
 
