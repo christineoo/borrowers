@@ -6,8 +6,6 @@ ArticlesNewController = Ember.Controller.extend
   hasNotes: Ember.computed.notEmpty 'model.notes'
   isValid:
       Ember.computed.and 'hasDescription', 'hasNotes'
-      #Ember.computed 'model.description', 'model.notes', ->
-          #!Ember.isEmpty(@get('model.description')) && !Ember.isEmpty(@get('model.notes'))
 
   actions:
       save: ->
