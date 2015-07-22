@@ -1,10 +1,13 @@
 `import Ember from 'ember'`
 
 FriendsBaseController = Ember.Controller.extend
+  hasEmail: Ember.computed.notEmpty 'model.email'
+  hasFirstName: Ember.computed.notEmpty 'model.firstName'
+  hasLastName: Ember.computed.notEmpty 'model.lastName'
+  hasTwitter: Ember.computed.notEmpty 'model.twitter'
 
   isValid:
-      Ember.computed 'model.email', 'model.firstName', 'model.lastName', 'model.twitter', ->
-          !Ember.isEmpty(@get('model.email')) && !Ember.isEmpty(@get('model.firstName')) && !Ember.isEmpty(@get('model.lastName')) && !Ember.isEmpty(@get('model.twitter'))
+      Ember.computed.and 'hasEmail', 'hasFirstName', 'hasLastName', 'hasTwitter'
 
   actions:
       save: ->
