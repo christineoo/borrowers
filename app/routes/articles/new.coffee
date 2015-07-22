@@ -15,4 +15,9 @@ ArticlesNewRoute = Ember.Route.extend
       cancel: ->
           @transitionTo 'articles'
 
+  deactivate: ->
+      model = @modelFor 'articles/new'
+      if model.get 'isNew'
+          model.destroyRecord()
+
 `export default ArticlesNewRoute`
