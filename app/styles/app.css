@@ -10,3 +10,7 @@ body {
 table {
   width: 100%;
 }
+
+.burger {
+  display: none;
+}
