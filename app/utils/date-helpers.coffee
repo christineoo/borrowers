@@ -1,4 +1,6 @@
+`import moment from 'npm:moment'`
+
 formatDate = (date, format) ->
-    window.moment(date).format(format)
+    moment(date).format(format)
 
 `export { formatDate }`
