@@ -39,7 +39,7 @@
     "moment": "^2.10.3"
   },
   "dependencies": {
-    "ember-cli-fill-murray-101": "^0.2.1",
+    "ember-cli-fill-murray-101": "^0.3.2",
     "ember-cli-htmlbars": "0.7.9"
   }
 }
